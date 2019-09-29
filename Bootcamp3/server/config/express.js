@@ -9,7 +9,7 @@ var path = require('path'),
 
 module.exports.init = function() {
   //connect to database
-    mongoose.connect(config.db.uri, { useNewUrlParser: true});
+    mongoose.connect(config.db.uri, { useNewUrlParser: true, useUnifiedTopology: true});
     mongoose.set('useCreateIndex', true);
     mongoose.set('useFindAndModify', false);
 
@@ -21,6 +21,7 @@ module.exports.init = function() {
 
   //body parsing middleware 
   app.use(bodyParser.json());
+
 
   /* serve static files - see http://expressjs.com/en/starter/static-files.html */
   app.use('/', express.static(__dirname + '/../../client'));

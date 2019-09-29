@@ -29,10 +29,12 @@ exports.create = function(req, res) {
 
   /* save the coordinates (located in req.results if there is an address property) */
   if(req.results) {
+
     listing.coordinates = {
       latitude: req.results.lat, 
-      longitude: req.results.lng
+      longitude: req.results.lng,
     };
+    console.log(JSON.parse(listing._doc.coordinates["0"]._doc.latitude));
   }
  
   /* Then save the listing */
@@ -57,12 +59,31 @@ exports.read = function(req, res) {
 exports.update = function(req, res) {
   var listing = req.listing;
 
-  listing.
-
   /* Replace the listings's properties with the new properties found in req.body */
- 
+ console.log(req.body);
+ if(req.body.code){
+   listing.code = req.body.code;
+ }
+ if(req.body.name){
+    listing.name = req.body.name;
+ }
+ if(req.body.address){
+    listing.address = req.body.address;
+ }
+ if(req.results){
+    listing.coordinates.latitude = req.results.lat;
+    listing.coordinates.longitude = req.results.lng;
+ }
+  listing.save(function(err) {
+      if(err) {
+          console.log(err);
+          res.status(400).send(err);
+      } else {
+          res.json(listing);
+      }
+  });
+
   /*save the coordinates (located in req.results if there is an address property) */
- 
   /* Save the listing */
 
 };
@@ -70,7 +91,9 @@ exports.update = function(req, res) {
 /* Delete a listing */
 exports.delete = function(req, res) {
   var listing = req.listing;
-
+  console.log(listing);
+  listing.remove();
+  res.status(200).end();
   /* Add your code to remove the listins */
 
 };
