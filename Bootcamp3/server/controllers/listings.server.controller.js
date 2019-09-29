@@ -57,6 +57,8 @@ exports.read = function(req, res) {
 exports.update = function(req, res) {
   var listing = req.listing;
 
+  listing.
+
   /* Replace the listings's properties with the new properties found in req.body */
  
   /*save the coordinates (located in req.results if there is an address property) */
@@ -75,14 +77,17 @@ exports.delete = function(req, res) {
 
 /* Retreive all the directory listings, sorted alphabetically by listing code */
 exports.list = function(req, res) {
-  /* Add your code */
+  Listing.find({},'code',(err, data) => {
+    if(err) console.log(err);
+    res.json(data);
+  });
 };
 
-/* 
-  Middleware: find a listing by its ID, then pass it to the next request handler. 
+/*
+  Middleware: find a listing by its ID, then pass it to the next request handler.
 
-  HINT: Find the listing using a mongoose query, 
-        bind it to the request object as the property 'listing', 
+  HINT: Find the listing using a mongoose query,
+        bind it to the request object as the property 'listing',
         then finally call next
  */
 exports.listingByID = function(req, res, next, id) {
