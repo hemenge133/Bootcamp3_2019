@@ -29,11 +29,14 @@ exports.create = function(req, res) {
 
   /* save the coordinates (located in req.results if there is an address property) */
   if(req.results) {
-
+    listing._id = req.body._id;
     listing.coordinates = {
       latitude: req.results.lat, 
       longitude: req.results.lng,
     };
+    listing.name = req.body.name;
+    listing.code = req.body.code;
+    listing.address = req.body.address;
   }
  
   /* Then save the listing */
@@ -42,8 +45,7 @@ exports.create = function(req, res) {
       console.log(err);
       res.status(400).send(err);
     } else {
-      res.json(listing);
-      console.log(listing)
+      res.status(200).json(listing);
     }
   });
 };
@@ -51,7 +53,7 @@ exports.create = function(req, res) {
 /* Show the current listing */
 exports.read = function(req, res) {
   /* send back the listing as json from the request */
-  res.json(req.listing);
+  res.json(req.body);
 };
 
 /* Update a listing - note the order in which this function is called by the router*/
@@ -72,8 +74,6 @@ exports.update = function(req, res) {
         listing.coordinates.latitude = req.results.lat;
         listing.coordinates.longitude = req.results.lng;
      }
-     res.body = json(listing);
-     console.log(res);
   listing.save(function(err) {
       if(err) {
           console.log(err);

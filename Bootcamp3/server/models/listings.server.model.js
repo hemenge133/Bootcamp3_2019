@@ -28,7 +28,12 @@ listingSchema.pre('save', function(next) {
 
     if(!this.created_at)
         this.created_at = current;
-
+    if(!this.name){
+        throw new Error("Err: No Name");
+    }
+    if(!this.code){
+        throw new Error("Err: No Code");
+    }
     next();
 });
 
