@@ -20,7 +20,7 @@ module.exports.init = function() {
   app.use(morgan('dev'));
 
   //body parsing middleware 
-  app.use(bodyParser.json());
+  app.use(bodyParser.json({extended: 'true'}));
 
 
   /* serve static files - see http://expressjs.com/en/starter/static-files.html */
