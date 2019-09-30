@@ -30,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/server/controllers/listings.server.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="91">
-              <caret line="60" column="31" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="31" />
+              <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -38,7 +38,7 @@
       <file leaf-file-name="listings.server.routes.test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/tests/listings.server.routes.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-135">
+            <state relative-caret-position="443">
               <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
             </state>
           </provider>
@@ -47,7 +47,7 @@
       <file leaf-file-name="listings.server.model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/models/listings.server.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="-217">
               <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
             </state>
           </provider>
@@ -56,7 +56,7 @@
       <file leaf-file-name="coordinates.server.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/controllers/coordinates.server.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="442">
               <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
             </state>
           </provider>
@@ -300,20 +300,11 @@
       <workItem from="1569768375943" duration="2973000" />
       <workItem from="1569775786011" duration="26562000" />
       <workItem from="1569813719098" duration="809000" />
-      <workItem from="1569849335290" duration="4017000" />
+      <workItem from="1569849335290" duration="4812000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Listings_CRUD_tests_should_be_able_to_update_a_listing - 2019.09.30 at 09h 56m 37s.xml">
-      <configuration name="Listings CRUD tests.should be able to update a listing" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Listings_CRUD_tests_should_be_able_to_update_a_listing - 2019.09.30 at 10h 02m 47s.xml">
-      <configuration name="Listings CRUD tests.should be able to update a listing" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Listings_CRUD_tests - 2019.09.30 at 10h 02m 47s.xml">
-      <configuration name="Listings CRUD tests" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="Listings_CRUD_tests - 2019.09.30 at 10h 04m 37s.xml">
       <configuration name="Listings CRUD tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
@@ -335,13 +326,21 @@
     <history-entry file="Listings_CRUD_tests - 2019.09.30 at 10h 21m 17s.xml">
       <configuration name="Listings CRUD tests" configurationId="mocha-javascript-test-runner" />
     </history-entry>
+    <history-entry file="Listings_CRUD_tests - 2019.09.30 at 10h 24m 03s.xml">
+      <configuration name="Listings CRUD tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Listings_CRUD_tests - 2019.09.30 at 10h 25m 47s.xml">
+      <configuration name="Listings CRUD tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Listings_CRUD_tests - 2019.09.30 at 10h 25m 53s.xml">
+      <configuration name="Listings CRUD tests" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35289000" />
+    <option name="totallyTimeSpent" value="36084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983734" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -352,7 +351,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.56821376" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3755274" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -383,14 +382,8 @@
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/controllers/listings.server.controller.js</url>
-          <line>60</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -685,20 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/listings.server.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/coordinates.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/listings.server.routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -709,9 +688,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/coordinates.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/models/listings.server.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/tests/listings.server.routes.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
+        <state relative-caret-position="443">
           <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
         </state>
       </provider>
@@ -719,7 +712,7 @@
     <entry file="file://$PROJECT_DIR$/server/controllers/listings.server.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
-          <caret line="60" column="31" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="31" />
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
         </state>
       </provider>
     </entry>

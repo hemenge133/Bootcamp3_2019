@@ -58,7 +58,7 @@ exports.read = function(req, res) {
 
 /* Update a listing - note the order in which this function is called by the router*/
 exports.update = function(req, res) {
-      var listing = req.listing;
+      var listing = new Listing();
 
       /* Replace the listings's properties with the new properties found in req.body */
      if(req.body.code){
