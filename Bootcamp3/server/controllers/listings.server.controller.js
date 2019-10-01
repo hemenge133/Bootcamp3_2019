@@ -31,8 +31,8 @@ exports.create = function(req, res) {
   if(req.results) {
     listing._id = req.body._id;
     listing.coordinates = {
-      latitude: (req.results.lat).toString(),
-      longitude: (req.results.lng).toString(),
+      latitude: (req.results.lat),
+      longitude: (req.results.lng),
     };
     listing.name = req.body.name;
     listing.code = req.body.code;
