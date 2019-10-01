@@ -31,8 +31,8 @@ exports.create = function(req, res) {
   if(req.results) {
     listing._id = req.body._id;
     listing.coordinates = {
-      latitude: req.results.lat, 
-      longitude: req.results.lng,
+      latitude: (req.results.lat).toString(),
+      longitude: (req.results.lng).toString(),
     };
     listing.name = req.body.name;
     listing.code = req.body.code;
@@ -53,27 +53,47 @@ exports.create = function(req, res) {
 /* Show the current listing */
 exports.read = function(req, res) {
   /* send back the listing as json from the request */
-  res.json(req.body);
+    var listing = req.listing;
+
+    if(req.body.code){
+        listing.code = req.body.code;
+    }
+    if(req.body.name){
+        listing.name = req.body.name;
+    }
+    if(req.body.address){
+        listing.address = req.body.address;
+    }
+    if(req.results){
+        listing.coordinates.latitude = parseFloat(req.results.lat);
+        listing.coordinates.longitude = parseFloat(req.results.lng);
+    }
+
+
+    res.json(listing);
 };
 
 /* Update a listing - note the order in which this function is called by the router*/
 exports.update = function(req, res) {
-      var listing = new Listing();
+    var listing = req.listing;
+    console.log(req.listing);
+
+    if(req.body.code){
+        listing.code = req.body.code;
+    }
+    if(req.body.name){
+        listing.name = req.body.name;
+    }
+    if(req.body.address){
+        listing.address = req.body.address;
+    }
+    if(req.results){
+        listing.coordinates.latitude = parseFloat(req.results.lat);
+        listing.coordinates.longitude = parseFloat(req.results.lng);
+    }
 
       /* Replace the listings's properties with the new properties found in req.body */
-     if(req.body.code){
-       listing.code = req.body.code;
-     }
-     if(req.body.name){
-        listing.name = req.body.name;
-     }
-     if(req.body.address){
-        listing.address = req.body.address;
-     }
-     if(req.results){
-        listing.coordinates.latitude = req.results.lat;
-        listing.coordinates.longitude = req.results.lng;
-     }
+
   listing.save(function(err) {
       if(err) {
           console.log(err);

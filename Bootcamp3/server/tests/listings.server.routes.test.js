@@ -10,6 +10,8 @@ var listing2, id2;
 /* Unit tests for testing server side routes for the listings API */
 describe('Listings CRUD tests', function() {
 
+    let testObject = {"field": "value"};
+
   this.timeout(10000);
 
   before(function(done) {
@@ -39,6 +41,7 @@ describe('Listings CRUD tests', function() {
           .end(function(err, res) {
             should.not.exist(err);
             should.exist(res);
+            console.log(res.body);
             res.body.name.should.equal('Library West');
             res.body.code.should.equal('LBW');
             res.body.address.should.equal('1545 W University Ave, Gainesville, FL 32603, United States');
